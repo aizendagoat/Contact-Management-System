@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f2f4f6;
+  --surface: #ffffff;
+  --ink: #14202e;
+  --muted: #5e6b7a;
+  --line: #dde2e8;
+  --accent: #0b7a75;
+  --accent-ink: #ffffff;
+  --accent-soft: #e0f1f0;
+  --danger: #b83a27;
+  --danger-soft: #fbe9e6;
+
+  --body: 'Instrument Sans', system-ui, 'Segoe UI', sans-serif;
+  --display: 'Bricolage Grotesque', var(--body);
+
+  font: 400 16px/1.5 var(--body);
+  color: var(--ink);
+  background: var(--bg);
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f161e;
+    --surface: #17212c;
+    --ink: #e8edf2;
+    --muted: #93a0ae;
+    --line: #28343f;
+    --accent: #3cc2b9;
+    --accent-ink: #06201e;
+    --accent-soft: #123532;
+    --danger: #ff8a75;
+    --danger-soft: #3a1f1a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+#root { min-height: 100svh; }
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+button, input { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
